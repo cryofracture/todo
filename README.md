@@ -50,6 +50,7 @@ Open another terminal window and you can begin making requests!
     On failure, status code 400 (bad request) is returned.
 
   - GET /api/token
+  
     Return an authentication token.
     This request must be authenticated using a HTTP Basic Authentication header.
     On success, a JSON object is returned with a field token set to the authentication token for the user and a field duration set to the (approximate) number of seconds the token is valid.

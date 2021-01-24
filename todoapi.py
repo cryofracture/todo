@@ -18,21 +18,6 @@ app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 db = SQLAlchemy(app)
 auth = HTTPBasicAuth()
 
-# tasks = [
-#     {
-#         'id': 1,
-#         'title': u'Buy groceries',
-#         'description': u'Milk, Cheese, Pizza, Fruit, Tylenol',
-#         'done': False
-#     },
-#     {
-#         'id': 2,
-#         'title': u'Learn API in python!',
-#         'description': u'Need to finish Miguel Grinberg\'s tutorial on REST API with Flask!',
-#         'done': False
-#     }
-# ]
-
 class User(db.Model):
     __tablename__ : 'users'
     id = db.Column(db.Integer, primary_key=True)
