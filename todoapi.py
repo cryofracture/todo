@@ -121,7 +121,7 @@ def get_auth_token():
 @app.route('/api/resource')
 @auth.login_required
 def get_resource():
-    return jsonify({f'data': 'Hello, {g.user.username}'})
+    return jsonify({'data': f'Hello, {g.user.username}'})
 
 @auth.error_handler
 def unauthorized():
