@@ -8,7 +8,7 @@ jobs:
       if: type IN (push) and branch = feature
       script:
         - pip install -r requirements.txt
-        - python todoapi.py & APP_PID=$!
+        - python todoapi.py
 
       after_script:
 
@@ -19,4 +19,3 @@ jobs:
         - curl -u $TEST_USER:$TEST_PASSWORD -i -H "Content-Type: application/json" -X PUT -d '{"done":true}' http://localhost:5000/todo/api/v1.0/tasks/2
         - curl -u $TEST_USER:$TEST_PASSWORD -i -H "Content-Type: application/json" -X DELETE http://localhost:5000/todo/api/v1.0/tasks/1
         - curl -i -H "Content-Type: application/json" -X POST -d '{"title":"test unauthorized api access"}' http://localhost:5000/todo/api/v1.0/tasks
-        - kill $APP_PID
