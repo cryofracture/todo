@@ -83,7 +83,7 @@ Open another terminal window and you can begin making requests!
     On success, a JSON object with data for the authenticated user is returned.
     On failure, a status code 401 (unauthorized) is returned.
 
-  + PUT /todo/api/v1.0/tasks/<int:task_id>
+  * PUT /todo/api/v1.0/tasks/<int:task_id>
 
     Update an existing task for the user.
     The incoming request must in unicode format.
