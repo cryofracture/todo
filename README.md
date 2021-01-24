@@ -6,36 +6,28 @@ Using a RESTful API, create, find, update and delete tasks, as well as register 
 
 clone this repo, create a virtual environment, and install the requirements. Mac/Linux:
 
-    ```
     $ virtualenv venv
     $ source venv/bin/activate
     (venv) $ pip install -r requirements.txt
-    ```
 
 For Windows users:
 
-    ```
     $ virtualenv venv
     $ venv\Scripts\activate
     (venv) $ pip install -r requirements.txt
-    ```
 
 After installation is complete, create a '.env' file with the following:
 
-    ```
     export SECRET_KEY = 'your_secret_key_here'
     export SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite'
-    ```
 
 ## Running the API Server
 
 To run the server, simply run:
 
-    ```
     (venv) $ python todoapi.py
      * Running on http://127.0.0.1:5000/
      * Restarting with reloader
-    ```
 
 Open another terminal window and you can begin making requests!
 
