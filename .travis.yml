@@ -4,11 +4,13 @@ sudo: required
 
 if: type IN (push) and branch = feature
 script:
-  - pip install -r requirements.txt
-  - python todoapi.py
+  - echo "testing flask"
 
 after_script:
-
+  - pip install -r requirements.txt
+  - 
+    python todoapi.py &
+    APP_PID=$!
   - curl -i http://localhost:5000/todo.api/v1.0/tasks\
   - curl -i -X POST -H "Content-Type: application/json" -d '{"username":"$TEST_USER","password":"$TEST_PASSWORD"}' http://127.0.0.1:5000/api/users
   - curl -u $TEST_USER:$TEST_PASSWORD -i -H "Content-Type: application/json" -X POST -d '{"title":"test the api"}' http://localhost:5000/todo/api/v1.0/tasks
