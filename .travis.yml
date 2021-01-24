@@ -8,7 +8,7 @@ jobs:
       if: type IN (push) and branch = feature
       script:
         - pip install -r requirements.txt
-        - python todoapi
+        - python todoapi.py
 
       after_script:
 
