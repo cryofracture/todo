@@ -5,8 +5,7 @@ sudo: required
 if: type IN (push) and branch = feature
 script:
   - echo "testing flask"
-  - sudo apt-get install python3
-  - sudo apt-get install pip3
+  - sudo apt-get update
 
 after_script:
   - pip install -r requirements.txt
