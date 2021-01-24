@@ -83,10 +83,11 @@ Open another terminal window and you can begin making requests!
     On success, a JSON object with data for the authenticated user is returned.
     On failure, a status code 401 (unauthorized) is returned.
 
-  = PUT /todo/api/v1.0/tasks/<int:task_id>
+  + PUT /todo/api/v1.0/tasks/<int:task_id>
 
     Update an existing task for the user.
-    The incoming request must in unicode format, if the information is not unicode, return status code 400 (bad request) is returned.
+    The incoming request must in unicode format.
+    If the information is not unicode, return status code 400 (bad request) is returned.
     This request must be authenticated using a HTTP Basic Authentication header. Instead of username and password, the client can provide a valid authentication token in the username field. If using an authentication token the password field is not used and can be set to any value.
     On success, a JSON object with data for the authenticated user's updated task is returned.
 
