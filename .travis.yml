@@ -1,5 +1,5 @@
 dist: xenial
-language: bash 
+language: python 
 sudo: required
 
 jobs:
@@ -7,10 +7,8 @@ jobs:
     - stage: flask_app_run_test
       if: type IN (push) and branch = feature
       script:
-        - python3 -m venv venv
-        - source venv/bin/activate
-        - venv/bin/pip install -r requirements.txt
-        - python todoapi.py
+        - pip install -r requirements.txt
+        - python todoapi
 
       after_script:
 
