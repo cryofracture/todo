@@ -44,7 +44,7 @@ class User(db.Model):
         return User.query.get(data['id'])
 
 class Task(db.Model):
-    __table__name: 'tasks'
+    __table__name = 'tasks'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), index=True)
     description = db.Column(db.String(256))
